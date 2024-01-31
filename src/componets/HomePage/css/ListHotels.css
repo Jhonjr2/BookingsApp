@@ -1,0 +1,10 @@
+.Container_List_HotelCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 5em;
+
+}
+

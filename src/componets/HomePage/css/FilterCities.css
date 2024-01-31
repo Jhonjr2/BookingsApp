@@ -1,0 +1,57 @@
+.FilterCities_titleAndHr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.hr {
+    height: 0;
+    width: 60%;
+    border-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
+}
+
+
+.FilterCities_title {
+    font-size: 17px;
+    color: var(--Color-text-secudary);
+    font-weight: 600;
+
+}
+
+.FilterCities_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3em;
+}
+
+.FilterCities_allCities {
+    margin-bottom: 7px;
+    min-width: 105px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(212, 201, 201, 0.558);
+    transition: transform .3s ease;
+}
+
+.FilterCities_city {
+    margin-bottom: 7px;
+    min-width: 105px;
+    text-align: center;
+    padding: 3px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: rgba(212, 201, 201, 0.558);
+    border: none;
+    transition: transform .3s ease;
+}
+
+.FilterCities_allCities:hover,
+.FilterCities_city:hover {
+    background-color: var(--Color-text-secudary);
+    filter: brightness(1.2);
+    transform: scale(1.1);
+}

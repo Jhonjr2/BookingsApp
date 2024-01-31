@@ -1,0 +1,58 @@
+.filterName {
+    display: flex;
+    gap: .3em;
+}
+
+.filterName:hover .FilterName_Title {
+    display: none;
+}
+
+.FilterName_Title {
+    padding: 10px 10px 0 20px;
+    height: 45px;
+    position: relative;
+    top: -15px;
+    right: 15px;
+    border-radius: 2px 10px 10px 2px;
+    background-color: #8b878712;
+    color: rgba(0, 0, 0, 0.566);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.Search {
+    position: relative;
+    padding: 5px;
+    bottom: 20px;
+}
+
+.Search input {
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #222;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: #c42e36;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.Search:hover input {
+    width: 240px;
+}

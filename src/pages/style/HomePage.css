@@ -1,0 +1,29 @@
+.HomePage {
+  padding-top: 110px;
+}
+
+.HomePage_title_fiilters {
+  padding:0 0 25px 30px;
+  font-size: 20px;
+  color: var(--Color-text-primary)
+}
+
+.HomePage_container1 {
+  position: fixed;
+  grid-column: 1;
+  padding: 25px;
+  max-width: 240px;
+  
+}
+
+.HomePage_container2 {
+  padding-left: 250px;
+}
+
+.HomePage_FilterName {
+  position: fixed;
+  left: 40%;
+  top: 5%;
+  z-index: 999;
+}
+
