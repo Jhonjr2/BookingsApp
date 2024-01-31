@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import { Map, Marker, ZoomControl } from 'pigeon-maps'
 import OtherHotels from '../componets/HotelInfoPage/OtherHotels'
-import ReservationdHotel from '../componets/HotelInfoPage/REservationdHotel'
+import ReservationdHotel from '../componets/HotelInfoPage/ReservationdHotel'
 
 
 const HotelInfoPage = () => {
