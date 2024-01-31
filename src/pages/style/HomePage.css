@@ -5,7 +5,8 @@
 .HomePage_title_fiilters {
   padding:0 0 25px 30px;
   font-size: 20px;
-  color: var(--Color-text-primary)
+  color: rgba(0, 0, 0, 0.794);
+  
 }
 
 .HomePage_container1 {
