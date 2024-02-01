@@ -1,0 +1,73 @@
+.HotelInfoPage {
+    padding: 120px 0px 0 50px;
+}
+
+.HotelInfoPage_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    
+}
+
+.HotelInfoPage_header .HotelInfoPage_Hotel_name {
+   font-size: 25px;
+   font-weight: 500;
+   color: rgba(25, 19, 19, 0.883);
+}
+
+.HotelInfoPage_rating {
+    font-size: 17px;
+    margin-right: 70px;
+}
+
+.HotelInfoPage_Hotel_name {
+    font-size: 20px;
+    color: black;
+}
+
+
+.HotelInfoPage_imags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.HotelInfoPage_img1 {
+    max-width: 45%;
+    max-height: 407px;
+    border-radius: 20px 0 0 20px;
+}
+
+.HotelInforPage_Container_img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+
+}
+
+.HotelInfoPage_img5,
+.HotelInfoPage_img4,
+.HotelInfoPage_img3,
+.HotelInfoPage_img2 {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.HotelInfoPage_img3,
+.HotelInfoPage_img5 {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.HotelInfoPage_Map {
+    width: 90%;
+    height: 5%;
+    margin: 0 auto;
+}
+
+.title_map {
+    font-size: 20px;
+}
+

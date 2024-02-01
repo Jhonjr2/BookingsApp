@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../shared/HeaderShared.css'
+import useAuth from '../../hooks/useAuth'
 
-export const HeaderShared = () => {
+export const HeaderShared = ({setActiveMenuItem, activeMenuItem}) => {
 
-  const [activeMenuItem, setActiveMenuItem] = useState('');
+
+  const {login} = useAuth()
 
   const handleMenuItemClick = (itemName) => {
     setActiveMenuItem(itemName);
   };
+
   return (
     <div className='header'>
     <h1 className='header_title'><Link to='/'><span className='TextColorDifference'>Booking</span>App</Link></h1>
@@ -22,9 +25,9 @@ export const HeaderShared = () => {
       <li className={`header_register ${activeMenuItem === 'register' ? 'active' : ''}`}>
         <Link to='/register' onClick={() => handleMenuItemClick('register')}>Register</Link>
       </li>
-      <li className={`header_reservations ${activeMenuItem === 'reservations' ? 'active' : ''}`}>
+       {login && <li className={`header_reservations ${activeMenuItem === 'reservations' ? 'active' : ''}`}>
         <Link to='/reservations' onClick={() => handleMenuItemClick('reservations')}>Reservations</Link>
-      </li>
+      </li>}
     </nav>
   </div>
   )

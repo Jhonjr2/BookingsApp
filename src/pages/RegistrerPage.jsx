@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import useAuth from '../hooks/useAuth'
+import './style/RegisterPage.css'
 
 const RegistrerPage = () => {
 
@@ -20,34 +21,34 @@ const RegistrerPage = () => {
   }
 
   return (
-    <div>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit(submit)}>
-        <label>
-          <span>First Name</span>
-          <input {...register('firstName')} type="text" />
+    <div className='RegisterPage'>
+      <h2 className='RegisterPage_title'>Register</h2>
+      <form className='RegisterPage_from' onSubmit={handleSubmit(submit)}>
+        <label className='RegisterPage_label'>
+          <span className='RegisterPage_name'>First Name</span>
+          <input className='RegisterPage_input' {...register('firstName')} type="text" />
         </label>
-        <label>
-          <span>Last Name</span>
-          <input {...register('lastName')} type="text" />
+        <label className='RegisterPage_label'>
+          <span className='RegisterPage_lastname'>Last Name</span>
+          <input className='RegisterPage_input' {...register('lastName')} type="text" />
         </label>
-        <label>
-          <span>Email</span>
-          <input {...register('email')} type="email" />
+        <label className='RegisterPage_label'>
+          <span className='RegisterPage_email'>Email</span>
+          <input className='RegisterPage_input' {...register('email')} type="email" />
         </label>
-        <label>
-          <span>Password</span>
-          <input {...register('password')} type="password" />
+        <label className='RegisterPage_label'>
+          <span className='RegisterPage_password'>Password</span>
+          <input className='RegisterPage_input' {...register('password')} type="password" />
         </label>
-        <label>
-          <span>Gender</span>
-          <select {...register('gender')}>
-            <option value="other">prefer not say</option>
-            <option value="male">male</option>
-            <option value="female">female</option>
+        <label className='RegisterPage_label'>
+          <span className='RegisterPage_gender'> Gender</span>
+          <select className='RegisterPage_selectt' {...register('gender')}>
+            <option className='RegisterPage_option' value="other">prefer not say</option>
+            <option className='RegisterPage_option' value="male">male</option>
+            <option className='RegisterPage_option' value="female">female</option>
           </select>
         </label>
-        <button>regiter</button>
+        <button className='RegisterPage_btn'>regiter</button>
       </form>
     </div>
   )

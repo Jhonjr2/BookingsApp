@@ -1,0 +1,84 @@
+.ReservationsHotel {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.334);
+    border-radius: 10px;
+    max-width: 30%;
+    padding: 20px;
+    gap: 1em;
+    position: sticky;
+    top:90px;
+    left: 67%;
+    z-index: 9999;
+    background-color: white;
+}
+
+.ReservationsHotel_title {
+    font-size: 20px;
+}
+
+.ReservationsHotel_form {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.ReservationsHotel_form .label_container {
+    display: flex;
+}
+
+.ReservationsHotel_label2,
+.ReservationsHotel_label {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.492);
+    max-width: 100%;
+    padding: 7px;
+}
+
+.ReservationsHotel_label2 {
+    border-radius: 0 7px 0 0;
+}
+
+.ReservationsHotel_label {
+    border-radius: 7px 0px 0 0px;
+}
+
+.select {
+    margin-top: -8px;
+    max-width: 97.7%;
+    height: 50px;
+    border-radius: 0 0 7px 7px;
+}
+
+.ReservationsHotel_ckeck {
+    font-size: 12px;
+    font-weight: 510;
+    text-transform: uppercase ;
+}
+
+.ReservationsHotel_input {
+    padding: 10px;
+    max-width: 100%;
+    border: none;
+}
+
+.ReservationsHotel_btn {
+    max-width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--Color-text-secudary); 
+}
+
+.ReservationsHotel_btn:hover {
+  filter: brightness(1.2);
+}
+
+.adicional_reserve h3 {
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+}

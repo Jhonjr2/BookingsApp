@@ -8,7 +8,7 @@ const ListHotels = ({ GeneralFiltered}) => {
         {
         
           !GeneralFiltered || GeneralFiltered.length == 0 ?
-          <h2>Error</h2>
+          <span className="loader"></span>
           :
           GeneralFiltered?.map(e => (
             <HotelCard

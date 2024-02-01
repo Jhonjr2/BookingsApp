@@ -1,12 +1,14 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import useAuth from '../hooks/useAuth'
+import './style/LoginPage.css'
+import { useNavigate } from 'react-router-dom'
 
-const LoginPage = () => {
+const LoginPage = ({ setActiveMenuItem }) => {
 
   const { handleSubmit, reset, register } = useForm()
 
-  const { loginUser }  = useAuth()
+  const { loginUser } = useAuth()
 
   const submit = data => {
     loginUser(data)
@@ -16,39 +18,58 @@ const LoginPage = () => {
       password: ''
     })
   }
+  const navigate = useNavigate()
 
   const handleLogout = () => {
     localStorage.removeItem('token')
     localStorage.removeItem('user')
+    navigate('/login')
+    setActiveMenuItem('home')
+    window.location.reload()
+
   }
 
   if (localStorage.getItem('token')) {
-    const user = JSON.parse(localStorage.getItem('user'))
+    const { firstName, lastName } = JSON.parse(localStorage.getItem('user'))
 
     return (
-      <div>
+      <div className='titleLogin'>
         <img src="" alt="" />
-        <h2>Welcome {user?.firstName + ' ' + user?.lastName}</h2>
+        <h2>Welcome {firstName + ' ' + lastName}</h2>
         <button onClick={handleLogout}>Logout</button>
       </div>
     )
-    
+
+  }
+
+  const handleNavigateRegister = () => {
+    navigate(`/register`)
+    setActiveMenuItem('register')
   }
 
 
+
   return (
-    <div>
-      <form onSubmit={handleSubmit(submit)}>
-        <label>
-          <span>Email</span>
-          <input {...register('email')} type="email" />
+    <div className='login'>
+      <form className='Login_form' onSubmit={handleSubmit(submit)}>
+        <div className='Login_textPrincipal'>
+          <h2 className='login_title'>Welcome back to Booking login</h2>
+          <p className='longin_subtitle'>It's great to have you back!</p>
+        </div>
+        <label className='login_label'>
+          <span className='login_Email'>Email</span>
+          <input className='login_input' {...register('email')} type="email" />
         </label>
-        <label>
-          <span>Password</span>
-          <input {...register('password')} type="password" />
+        <label className='login_label'>
+          <span className='login_password'>Password</span>
+          <input className='login_input'  {...register('password')} type="password" />
         </label>
-        <button>Submit</button>
+        <div>
+          <button className='login_btn1'>Login</button>
+          <button  onClick={handleNavigateRegister} className='login_btn'>Register</button> 
+        </div>
       </form>
+      <img className='login_image' src="../img_rojo2.jpeg" alt="" />
     </div>
   )
 }
